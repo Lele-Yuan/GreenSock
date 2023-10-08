@@ -1,0 +1,15 @@
+{
+  "name": "GreenSock",
+  "version": "1.0.0",
+  "description": "GreenSock with ScrollTrigger animation demo practice",
+  "main": "index.js",
+  "repository": "git@github.com:Lele-Yuan/GreenSock.git",
+  "author": "yuanlele <yuanlele@baidu.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vite": "^4.4.11"
+  }
+}
