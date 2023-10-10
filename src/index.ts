@@ -3,7 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".comparisonSection").forEach((section: any) => {
+gsap.utils.toArray(".two-page").forEach((section: any) => {
 	let tl = gsap.timeline({
         scrollTrigger: {
             trigger: section,
