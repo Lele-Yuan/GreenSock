@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headlight</title>
+    <!-- <script src="./src/jquery.js" type="module"></script>
+    <script src="./src/jquery-fullpage.js" type="module"></script>
+    <script src="./src/fullpage.js" type="module"></script> -->
+    <link href="./headlight.css" rel="stylesheet">
+    <link href="https://unpkg.com/fullpage.js/dist/fullpage.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .section {
+            height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+            background-color: black;
+            color: #fff;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .q4_etron_headlight_fullpage {
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            overflow: hidden auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section section-content" style="background: red;">Some section 1</div>
+        <div class="section section-content" style="background: green;">Some section 2</div>
+        <div class="section">
+            <section class="q4_etron_headlight_fullpage">
+                <div class="q4_etron_headlight_scroll_wraper">
+                    <div class="q4_etron_headlight_scroll_top" style="width: 100%; position: absolute; top: 1px;"></div>
+                    <div class="q4_etron_headlight_scroll_start" style="width: 100%; position: absolute; top: 99vh;"></div>
+                    <div class="q4_etron_headlight_scroll_start2" style="width: 100%; position: absolute; top: 101vh;"></div>
+                    <div class="q4_etron_headlight_scroll_end" style="width: 100%; position: absolute; top: 200vh;"></div>
+                    <div class="q4_etron_headlight_cover_wrapper">
+                        <div class="q4_etron_headlight_description">
+                            <div class="q4_etron_headlight_description-div">自在有型，驾驭由心</div>
+                            <p class="q4_etron_headlight_description-p">奥迪 Q4 e-tron 外观选取运动设计元素，动感车身线条搭配数字化灯光，彰显纯电豪华 SUV 的非凡强大气场，将有型武装到背影。</p>
+                        </div>
+                        <!-- <img class="cover-bg" src="./img/1.jpeg" alt="" srcset=""> -->
+                        <canvas id="light-canvas" class="cover-bg" />
+                    </div>
+                    <!-- <div class="q4_etron_headlight_scroll_end" style="height: 1px; width: 100%; position: absolute; bottom: -100vh;"></div> -->
+                </div>
+            </section>
+        </div>
+        <div class="section section-content"  style="background: pink;">Some section 3</div>
+        <div class="section section-content"  style="background: gray;">Some section 4</div>
+    </div>
+    <!-- <section style="height: 100vh;"></section>
+    <div class="button">click</div> -->
+    <script src="./src/headlight_gsap_module.js" type="module"></script>
+</body>
+</html>
