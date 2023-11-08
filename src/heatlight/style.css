@@ -20,10 +20,14 @@ body::-webkit-scrollbar-thumb {
     background-color: #000000;
 }
 
+/* .pin-spacer {
+    position: sticky !important;
+    top: 0;
+} */
+
 .q4_etron_headlight_description{
     position: absolute;
     top: 0;
-    height: 300px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -43,7 +47,7 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: .5px;
     max-width: 100%;
     line-height: 24px;
-    margin-bottom: 32px;
+    margin: 0 0 32px 0;
     line-height: 24px;
 }
 .q4_etron_headlight_cover-bg {
@@ -53,26 +57,34 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: scale(.8);
     transform-origin: bottom center;
 }
 @media only screen and (min-width: 375px) and (max-width:768px) {
     .q4_etron_headlight_description{
+        padding: 120px 0;
         width: 80%;
         left: 10%;
-        text-align: center;
+        /* text-align: center; */
     }
     .q4_etron_headlight_description-div{
         font-size: 24px;
+        line-height: 32px;
     }
     .q4_etron_headlight_description-p{
         font-size: 14px;
     }
+    .q4_etron_headlight_cover-bg {
+        transform: scale(1);
+    }
 }
 @media only screen and (min-width: 768px) {
     .q4_etron_headlight_description{
+        padding: 5% 0;
         width: 378px;
         left: 20%;
         text-align: left;
+    }
+    .q4_etron_headlight_cover-bg {
+        transform: scale(.7);
     }
 }
