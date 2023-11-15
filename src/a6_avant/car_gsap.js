@@ -1,5 +1,5 @@
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const a6Avant_mobile = document.documentElement.offsetWidth < 428
@@ -13,8 +13,8 @@ const a6AvantWidthHeight = {
 
 const a6AvantCarCount = 45;
 const a6AvantFolderName = a6Avant_mobile ? 'mobile' : 'pc'
-// const a6AvantCarCurrentFrame = index => `/content/dam/OneWeb/faw_vw/apps/a6_avant-car-test/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
-const a6AvantCarCurrentFrame = index => `/src/a6_avant/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
+const a6AvantCarCurrentFrame = index => `/content/dam/OneWeb/faw_vw/model/a6/a6_avant/2023/animation/final/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
+// const a6AvantCarCurrentFrame = index => `/src/a6_avant/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
 
 a6AvantCarCanvas.width = a6AvantWidthHeight[a6AvantFolderName].width;
 a6AvantCarCanvas.height = a6AvantWidthHeight[a6AvantFolderName].height;
@@ -55,7 +55,7 @@ a6AvantCarTl.to(a6AvantCarFrame, {
   snap: "frame",
   ease: "none",
   duration: 1,
-  delay: .5,
+  delay: .1,
   onUpdate: render, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
