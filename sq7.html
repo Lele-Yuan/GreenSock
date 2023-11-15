@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headlight</title>
+    <link href="./src/sq7/style.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="section" style="background: palevioletred;">Some section 1</div>
+        <div class="section" style="background: pink;">Some section 2</div>
+<div class="section_scroll_wraper section1">
+    <div class="section_cover_wrapper">
+        <canvas id="section1_canvas" class="section_cover-bg"></canvas>
+        <div class="section_mask">
+            <div class="section_description">
+                <div class="section_description-div">动势难挡 恣意驰骋</div>
+                <p class="section_description-p">八速 Tiptronic 与quattro 智能四轮传动系统，让您随心所驭，引领 SQ7 征服每段旅程。</p>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="section"  style="background: bisque;">Some section 3</div>
+<div class="section_scroll_wraper section2">
+    <div class="section_cover_wrapper">
+        <canvas id="section2_canvas" class="section_cover-bg" />
+    </div>
+</div>
+        <div class="section"  style="background: gray;">Some section 4</div>
+    </div>
+    <script src="./node_modules/gsap/dist/gsap.js"></script>
+    <script src="./node_modules/gsap/dist/ScrollTrigger.js"></script>
+    <script src="./src/sq7/index.js"></script>
+</body>
+</html>
