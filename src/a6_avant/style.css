@@ -29,3 +29,69 @@ body::-webkit-scrollbar-thumb {
     object-fit: cover;
     transform-origin: bottom center;
 }
+
+.a6_avant_car_mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+.a6_avant_car_description{
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    color: #fff;
+}
+.a6_avant_car_description-div{
+    font-size: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family: "audi-wide-bold","audi-zh-bold";
+    line-height: 48px;
+}
+.a6_avant_car_description-p{
+    font-size: 16px;
+    letter-spacing: .5px;
+    max-width: 100%;
+    line-height: 24px;
+    margin: 0 0 32px 0;
+    line-height: 24px;
+}
+
+@media only screen and (min-width: 375px) and (max-width:768px) {
+    .a6_avant_car_mask {
+        opacity: 1;
+    }
+    .a6_avant_car_description{
+        padding: 50px 0;
+        width: 80%;
+        left: 10%;
+        top: 0;
+        /* text-align: center; */
+    }
+    .a6_avant_car_description-div{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .a6_avant_car_description-p{
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .a6_avant_car_mask {
+        opacity: 0;
+    }
+    .a6_avant_car_description{
+        padding: 5% 0;
+        width: 378px;
+        left: 10%;
+        bottom: 0;
+        text-align: left;
+    }
+}

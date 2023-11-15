@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const a6Avant_mobile = document.documentElement.offsetWidth < 428
@@ -7,14 +7,14 @@ const a6AvantCarCanvas = document.getElementById("a6-avant-car-canvas");
 const a6AvantCarContext = a6AvantCarCanvas.getContext("2d");
 
 const a6AvantWidthHeight = {
-  pc: {width: 5511, height: 4063},
+  pc: {width: 1920, height: 1080},
   mobile: {width: 1080, height: 1920}
 }
 
 const a6AvantCarCount = 45;
 const a6AvantFolderName = a6Avant_mobile ? 'mobile' : 'pc'
-const a6AvantCarCurrentFrame = index => `/content/dam/OneWeb/faw_vw/apps/a6_avant-car-test/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
-// const a6AvantCarCurrentFrame = index => `/src/a6_avant/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
+// const a6AvantCarCurrentFrame = index => `/content/dam/OneWeb/faw_vw/apps/a6_avant-car-test/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
+const a6AvantCarCurrentFrame = index => `/src/a6_avant/img/${a6AvantFolderName}/${(index + 1)}.jpg`;
 
 a6AvantCarCanvas.width = a6AvantWidthHeight[a6AvantFolderName].width;
 a6AvantCarCanvas.height = a6AvantWidthHeight[a6AvantFolderName].height;
@@ -55,6 +55,14 @@ a6AvantCarTl.to(a6AvantCarFrame, {
   snap: "frame",
   ease: "none",
   duration: 1,
+  delay: .5,
   onUpdate: render, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
+if (!a6Avant_mobile) {
+  a6AvantCarTl.to(
+    '.a6_avant_car_mask',
+    {opacity: 1, scrub: 1, duration: 1},
+    '>'
+);
+}
