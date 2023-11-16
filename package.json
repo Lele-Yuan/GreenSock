@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev:vite": "vite",
-    "dev": "webpack server --mode development --config webpack.config.js",
+    "dev": "webpack server --mode development --config webpack.config.js --open",
     "build": "webpack --mode production",
     "preview": "vite preview --open"
   },

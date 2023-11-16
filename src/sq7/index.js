@@ -34,7 +34,7 @@ const initGsap = (sectionName, sectionConfig) => {
         start: "top top",
         end: 'bottom bottom',
         scrub: true,
-        markers: true,
+        // markers: true,
         pin: `.${sectionName} .section_cover_wrapper`,
         anticipatePin: 1,
     },

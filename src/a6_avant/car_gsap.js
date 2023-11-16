@@ -59,10 +59,8 @@ a6AvantCarTl.to(a6AvantCarFrame, {
   onUpdate: render, // use animation onUpdate instead of scrollTrigger's onUpdate
 });
 
-if (!a6Avant_mobile) {
-  a6AvantCarTl.to(
-    '.a6_avant_car_mask',
-    {opacity: 1, scrub: 1, duration: 1},
-    '>'
+a6AvantCarTl.to(
+  '.a6_avant_car_mask',
+  {opacity: 1, scrub: 1, duration: 1},
+  '>'
 );
-}
