@@ -67,13 +67,11 @@ const indexName = index => {
         return `0${index}`
     }
 }
-// const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';
-const pathName = '/src/sq7';
-
-// const section1CurrentFrame = index => `${pathName}/img/${systemName}/cs1.00${index < 10 ? '0' : ''}${index}${isMobile ? '' : '_compress'}.jpg`;
-// // const section1CurrentFrame = index => `${pathName}/img/${systemName}/cs1.00${index < 10 ? '0' : ''}${index}${isMobile ? '' : '_compress'}.jpg`;
+// const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
+const pathName = '/src/sq7'; // 本地图片路径
+// 图片地址
+const section1CurrentFrame = index => `${pathName}/jpg/${systemName}/cs1.${indexName(index + 1)}.jpg`;
 // const section1CurrentFrame = index => `${pathName}/webp/${systemName}/cs1.${indexName(index + 1)}.webp`;
-const section1CurrentFrame = index => `${pathName}/webp/${systemName}/cs1.${indexName(index + 1)}.webp`;
 initGsap('section1', {
     sectionCurrentFrame: section1CurrentFrame,
     canvasSize: {
