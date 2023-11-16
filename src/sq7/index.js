@@ -2,6 +2,9 @@
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+const isMobile = document.documentElement.offsetWidth < 428;
+const systemName = isMobile ? 'mob' : 'pc';
+
 const initGsap = (sectionName, sectionConfig) => {
     const {sectionCurrentFrame, canvasSize, sectionCount} = sectionConfig;
     const sectionCanvas = document.getElementById(`${sectionName}_canvas`);
@@ -47,7 +50,7 @@ const initGsap = (sectionName, sectionConfig) => {
         onUpdate: render, // use animation onUpdate instead of scrollTrigger's onUpdate
     });
 
-    if (sectionName === 'section1') {
+    if (!isMobile && sectionName === 'section1') {
         sectionTl.to(
             `.${sectionName} .section_mask`,
             {opacity: .7, scrub: 1, duration: 1},
@@ -55,27 +58,38 @@ const initGsap = (sectionName, sectionConfig) => {
         );
     }
 };
+const indexName = index => {
+    if (index < 10) {
+        return `000${index}`
+    } else if (index < 100) {
+        return `00${index}`
+    } else {
+        return `0${index}`
+    }
+}
+// const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';
+const pathName = '/src/sq7';
 
-const isMobile = document.documentElement.offsetWidth < 428;
-const systemName = isMobile ? 'mob' : 'pc';
-// const section1CurrentFrame = index => `/content/dam/OneWeb/faw_vw/apps/sq7-test/img/${systemName}/image${(index + 1)}.jpg`;
-const section1CurrentFrame = index => `/src/sq7/img/${systemName}/cs1.00${index < 10 ? '0' : ''}${index}${isMobile ? '' : '_compress'}.jpg`;
+// const section1CurrentFrame = index => `${pathName}/img/${systemName}/cs1.00${index < 10 ? '0' : ''}${index}${isMobile ? '' : '_compress'}.jpg`;
+// // const section1CurrentFrame = index => `${pathName}/img/${systemName}/cs1.00${index < 10 ? '0' : ''}${index}${isMobile ? '' : '_compress'}.jpg`;
+// const section1CurrentFrame = index => `${pathName}/webp/${systemName}/cs1.${indexName(index + 1)}.webp`;
+const section1CurrentFrame = index => `${pathName}/webp/${systemName}/cs1.${indexName(index + 1)}.webp`;
 initGsap('section1', {
     sectionCurrentFrame: section1CurrentFrame,
     canvasSize: {
         pc: {width: 2880, height: 1620},
         mob: {width: 1125, height: 2436}
     }[systemName],
-    sectionCount: 50
+    sectionCount: 101
 });
 
-// const section2CurrentFrame = index => `/content/dam/OneWeb/faw_vw/apps/sq7-test/img/image${(index + 1)}.png`;
-const section2CurrentFrame = index => `/src/car/img/image${(index + 1)}.png`;
-initGsap('section2', {
-    sectionCurrentFrame: section2CurrentFrame,
-    canvasSize: {
-        pc: {width: 1500, height: 844},
-        mob: {width: 1500, height: 844}
-    }[systemName],
-    sectionCount: 35
-});
+// // const section2CurrentFrame = index => `/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final/img/image${(index + 1)}.png`;
+// const section2CurrentFrame = index => `/src/car/img/image${(index + 1)}.png`;
+// initGsap('section2', {
+//     sectionCurrentFrame: section2CurrentFrame,
+//     canvasSize: {
+//         pc: {width: 1500, height: 844},
+//         mob: {width: 1500, height: 844}
+//     }[systemName],
+//     sectionCount: 35
+// });

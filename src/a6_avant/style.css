@@ -64,6 +64,10 @@ body::-webkit-scrollbar-thumb {
     margin: 0 0 32px 0;
     line-height: 24px;
 }
+.a6_avant_car_sub_description {
+    font-size: 10px;
+    margin: 0;
+}
 
 @media only screen and (min-width: 375px) and (max-width:768px) {
     .a6_avant_car_description{
