@@ -9,27 +9,24 @@ body::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
-.section {
+.section1 {
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
     position: relative;
     background-color: black;
     color: #fff;
-}
-
-.section_scroll_wraper {
-    height: 400vh;
+    height: 300vh;
     position: relative;
 }
 
-.section_cover_wrapper {
+.section1 .section_cover_wrapper {
     width: 100vw;
     height: 100vh;
     background-color: #000000;
 }
 
-.section_cover-bg {
+.section1 .section_cover-bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -39,17 +36,17 @@ body::-webkit-scrollbar-thumb {
     transform-origin: bottom center;
 }
 
-.section_mask {
+.section1 .section_mask {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
 }
-.section_description{
+.section1 .section_description{
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 5%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -57,14 +54,14 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     color: #fff;
 }
-.section_description-div{
+.section1 .section_description-div{
     font-size: 36px;
     letter-spacing: 1px;
     margin-bottom: 16px;
     font-family: "audi-wide-bold","audi-zh-bold";
     line-height: 48px;
 }
-.section_description-p{
+.section1 .section_description-p{
     font-size: 16px;
     letter-spacing: .5px;
     max-width: 100%;
@@ -73,28 +70,28 @@ body::-webkit-scrollbar-thumb {
     line-height: 24px;
 }
 @media only screen and (min-width: 375px) and (max-width:768px) {
-    .section_description{
+    .section1 .section_description{
         padding: 120px 0;
         width: 80%;
         left: 10%;
     }
-    .section_description-div{
+    .section1 .section_description-div{
         font-size: 24px;
         line-height: 32px;
     }
-    .section_description-p{
+    .section1 .section_description-p{
         font-size: 14px;
     }
-    .section_cover-bg {
+    .section1 .section_cover-bg {
         transform: scale(1);
     }
 }
 @media only screen and (min-width: 768px) {
-    .section_mask {
+    .section1 .section_mask {
         opacity: 0;
-        background: #000;
+        background: rgba(0, 0, 0, .4);
     }
-    .section_description{
+    .section1 .section_description{
         padding: 5% 0;
         width: 378px;
         text-align: left;

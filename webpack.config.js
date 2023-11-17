@@ -5,7 +5,8 @@ module.exports = {
     // headlight: './src/heatlight/headlight_gsap.js',
     // car: './src/car/car_gsap.js',
     // a6_avant: './src/a6_avant/car_gsap.js'
-    sq7: './src/sq7/index.js'
+    sq7_electric: './src/sq7/electric/index.js',
+    sq7_carface: './src/sq7/carface/index.js'
   }, //打包入口文件(如果是单个入口就是字符串，如果是多个入口就需要配置成对象)
   output: { //打包输出文件
       path: path.join(__dirname, 'dist'),

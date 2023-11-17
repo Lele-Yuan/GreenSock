@@ -1,2 +1,4 @@
 node_modules
 dist
+src/a6_avant/car_gsap.js
+*.DS_Store

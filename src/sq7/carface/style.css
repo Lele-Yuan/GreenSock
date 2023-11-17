@@ -1,0 +1,99 @@
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0;
+}
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.section2 {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background-color: black;
+    color: #fff;
+    height: 300vh;
+    position: relative;
+}
+
+.section2 .section_cover_wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+}
+
+.section2 .section_cover-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-origin: bottom center;
+}
+
+.section2 .section_mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.section2 .section_description{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    color: #fff;
+}
+.section2 .section_description-div{
+    font-size: 36px;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    font-family: "audi-wide-bold","audi-zh-bold";
+    line-height: 48px;
+}
+.section2 .section_description-p{
+    font-size: 16px;
+    letter-spacing: .5px;
+    max-width: 100%;
+    line-height: 24px;
+    margin: 0 0 32px 0;
+    line-height: 24px;
+}
+@media only screen and (min-width: 375px) and (max-width:768px) {
+    .section2 .section_description{
+        padding: 120px 0;
+        width: 80%;
+        left: 10%;
+    }
+    .section2 .section_description-div{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .section2 .section_description-p{
+        font-size: 14px;
+    }
+    .section2 .section_cover-bg {
+        transform: scale(1);
+    }
+}
+@media only screen and (min-width: 768px) {
+    .section2 .section_mask {
+        opacity: 0;
+        background: rgba(0, 0, 0, .4);
+    }
+    .section2 .section_description{
+        padding: 5% 0;
+        width: 400px;
+        text-align: left;
+    }
+}
