@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-const q4EtronLight_mobile = document.documentElement.offsetWidth < 428
+const q4EtronLight_mobile = document.documentElement.offsetWidth < 431
 const q4EtronLightCanvas = document.getElementById("q4-etron-light-canvas");
 const q4EtronLightContext = q4EtronLightCanvas.getContext("2d");
 
