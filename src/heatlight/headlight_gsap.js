@@ -12,7 +12,7 @@ const q4EtronLightWidthHeight = {
 
 const q4EtronLightCount = 4;
 const folderName = q4EtronLight_mobile ? 'mobile' : 'pc'
-const q4EtronLightCurrentFrame = index => `/content/dam/OneWeb/faw_vw/apps/q4_etron-headlight-test/${folderName}/${(index + 1)}.png`;
+const q4EtronLightCurrentFrame = index => `/content/dam/OneWeb/faw_vw/model/q4etron/2023/animation/final/img/${folderName}/${(index + 1)}.png`;
 // const q4EtronLightCurrentFrame = index => `/src/heatlight/img/${folderName}/${(index + 1)}.png`;
 
 q4EtronLightCanvas.width = q4EtronLightWidthHeight[folderName].width;
