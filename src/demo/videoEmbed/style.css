@@ -1,0 +1,4 @@
+svg:not(:root) {
+    position: absolute;
+    top: -100%;
+}
