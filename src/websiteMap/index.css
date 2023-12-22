@@ -22,6 +22,7 @@
 }
 .websit-map {
     max-width: 850px;
+    box-sizing: content-box;
     margin: auto;
     padding: 0 16px;
     overflow: hidden;
@@ -91,13 +92,51 @@
     line-height: 15px;
     font-weight: 400;
     font-family: "audi-wide", "audi-zh-regular";
-    margin-top: 10px;
+    margin-top: 13px;
     cursor: pointer;
     display: block;
     text-decoration: none;
 }
 
 
+@media only screen and (min-width: 1728px) {
+    .websit-map {
+        max-width: 1130px;
+    }
+    .websit-map .quote {
+        font-size: 36px;
+        line-height: 43px;
+        padding: 40px 0;
+        margin-bottom: 40px;
+    }
+
+    .websit-map-section {
+        margin-bottom: 53px;
+    }
+
+    .websit-map-section .title {
+        font-size: 22px;
+        line-height: 24px;
+        padding-bottom: 38px;
+    }
+
+    .websit-map-section .series .series-contianer .series-name {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 4px;
+        padding-bottom: 18px;
+    }
+
+    .websit-map-section .series .series-contianer .series-list .series-item {
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 15px;
+    }
+
+    .websit-map-section .series .series-contianer .series-list {
+        margin-bottom: 60px;
+    }
+}
 @media only screen and (max-width: 880px) {
     .websit-map {
         padding: 0 80px;
