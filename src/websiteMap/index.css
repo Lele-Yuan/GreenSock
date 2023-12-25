@@ -84,6 +84,7 @@
 .websit-map-section .series .series-contianer .series-list {
     margin-bottom: 40px;
     overflow: hidden;
+    margin-top: 5px;
 }
 
 .websit-map-section .series .series-contianer .series-list .series-item {
@@ -92,10 +93,34 @@
     line-height: 15px;
     font-weight: 400;
     font-family: "audi-wide", "audi-zh-regular";
-    margin-top: 13px;
+    margin-top: 8px;
+    padding-bottom: 5px;
     cursor: pointer;
     display: block;
     text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.websit-map-section .series .series-contianer .series-list .series-item:after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #F50537;
+    transition: transform .3s ease;
+    transform: scale(0, 1);
+    transform-origin: left;
+}
+
+.websit-map-section .series .series-contianer .series-list .series-item:hover {
+    font-weight: bold;
+    color: #F50537;
+}
+.websit-map-section .series .series-contianer .series-list .series-item:hover::after {
+    transform: scale(1);
 }
 
 

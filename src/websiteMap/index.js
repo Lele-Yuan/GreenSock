@@ -103,50 +103,111 @@
             }],
         },
         {
-            sectionTitle: 'A 系列轿车',
+            sectionTitle: 'A 系列',
             series: [{
-                title: 'A4 系列',
+                title: 'A3',
                 href: 'https://www.audi.cn',
                 list: [
-                    {name: 'A4L', href: 'https://www.audi.cn'},
-                    {name: 'A4 Avant', href: 'https://www.audi.cn'},
-                    {name: 'S4 Limousine', href: 'https://www.audi.cn'},
+                    {name: 'A3 Sportback', href: 'https://www.audi.cn/zh/models/a/a3/a3_sportback.html'},
+                    {name: 'A3L limousine', href: 'https://www.audi.cn/zh/models/a/a3/a3l_limousine.html'},
                 ]
             }, {
-                title: 'A5 系列',
+                title: 'A4',
                 href: 'https://www.audi.cn',
                 list: [
-                    {name: 'A4L', href: 'https://www.audi.cn'},
-                    {name: 'A4 Avant', href: 'https://www.audi.cn'},
-                    {name: 'S4 Limousine', href: 'https://www.audi.cn'},
+                    {name: 'A4L', href: 'https://www.audi.cn/zh/models/a/a4/a4l.html'},
+                    {name: 'A4 Avant', href: 'https://www.audi.cn/zh/models/a/a4/a4_avant.html'},
+                    {name: 'A4 allroad quattro', href: 'https://www.audi.cn/zh/models/a/a4/a4_allroad_quattro.html'},
+                    {name: 'S4 Limousine', href: 'https://www.audi.cn/zh/models/a/a4/s4_limousine.html'},
+                    {name: 'S4 Avant', href: 'https://www.audi.cn/zh/models/a/a4/s4_avant.html'},
+                    {name: 'RS 4 Avant', href: 'https://www.audi.cn/zh/models/a/a4/rs4_avant.html'},
                 ]
             }, {
-                title: 'A6 系列',
+                title: 'A5',
                 href: 'https://www.audi.cn',
                 list: [
-                    {name: 'A4L', href: 'https://www.audi.cn'},
-                    {name: 'A4 Avant', href: 'https://www.audi.cn'},
-                    {name: 'S4 Limousine', href: 'https://www.audi.cn'},
+                    {name: 'A5 Sportback', href: 'https://www.audi.cn'},
+                    {name: 'A5 Coupe', href: 'https://www.audi.cn'},
+                    {name: 'A5 Cabriolet', href: 'https://www.audi.cn'},
+                    {name: 'S5 Sportback', href: 'https://www.audi.cn'},
+                    {name: 'S5 Coupe', href: 'https://www.audi.cn'},
+                    {name: 'S5 Cabriolet', href: 'https://www.audi.cn'},
+                    {name: 'RS 5 Sportback', href: 'https://www.audi.cn'},
+                    {name: 'RS 5 Coupe', href: 'https://www.audi.cn'},
+
+                ]
+            },{
+                title: 'A6',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'A6L', href: 'https://www.audi.cn'},
+                    {name: 'A6 Avant', href: 'https://www.audi.cn'},
+                    {name: 'A6 allroad quattro', href: 'https://www.audi.cn'},
+                    {name: 'S6 limousine', href: 'https://www.audi.cn'},
+                    {name: 'RS 6 Avant', href: 'https://www.audi.cn'},
                 ]
             }, {
-                title: 'A7 系列',
+                title: 'A7',
                 href: 'https://www.audi.cn',
                 list: [
-                    {name: 'A4L', href: 'https://www.audi.cn'},
-                    {name: 'A4 Avant', href: 'https://www.audi.cn'},
-                    {name: 'S4 Limousine', href: 'https://www.audi.cn'},
+                    {name: 'A7 Sportback', href: 'https://www.audi.cn'},
+                    {name: 'S7 Sportback', href: 'https://www.audi.cn'},
+                    {name: 'RS 7 Sportback', href: 'https://www.audi.cn'},
+                ]
+            }, {
+                title: 'A8',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'A8L', href: 'https://www.audi.cn'},
+                    {name: 'A8L Horch 创始人版', href: 'https://www.audi.cn'},
+                    {name: 'S8L', href: 'https://www.audi.cn'},
                 ]
             }]
         },
         {
-            sectionTitle: 'Q 系列轿车',
+            sectionTitle: 'Q 系列',
             series: [{
-                title: 'Q5 系列',
+                title: 'Q2',
                 href: 'https://www.audi.cn',
                 list: [
-                    {name: 'A4L', href: 'https://www.audi.cn'},
-                    {name: 'A4 Avant', href: 'https://www.audi.cn'},
-                    {name: 'S4 Limousine', href: 'https://www.audi.cn'},
+                    {name: 'Q2L', href: 'https://www.audi.cn/zh/models/a/a4/a4l.html'},
+                    {name: 'Q2L e-tron', href: 'https://www.audi.cn/zh/models/a/a4/a4_avant.html'},
+                ]
+            },{
+                title: 'Q3',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'Q3', href: 'https://www.audi.cn/zh/models/a/a4/a4l.html'},
+                    {name: 'Q3 Sportback', href: 'https://www.audi.cn/zh/models/a/a4/a4_avant.html'},
+                ]
+            },{
+                title: 'Q4',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'Q4 e-tron', href: 'https://www.audi.cn/zh/models/a/a4/a4l.html'},
+                ]
+            },{
+                title: 'Q5',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'Q5L', href: 'https://www.audi.cn/zh/models/a/a4/a4l.html'},
+                    {name: 'Q5L Sportback', href: 'https://www.audi.cn/zh/models/a/a4/a4_avant.html'},
+                    {name: 'SQ5', href: 'https://www.audi.cn/zh/models/a/a4/a4_allroad_quattro.html'},
+                    {name: 'SQ5 Sportback', href: 'https://www.audi.cn/zh/models/a/a4/s4_limousine.html'},
+                ]
+            },{
+                title: 'Q7',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'Q7', href: 'https://www.audi.cn/zh/models/a/a4/a4l.html'},
+                    {name: 'SQ7 Sportback', href: 'https://www.audi.cn/zh/models/a/a4/a4_avant.html'},
+                ]
+            },{
+                title: 'Q8',
+                href: 'https://www.audi.cn',
+                list: [
+                    {name: 'Q8', href: 'https://www.audi.cn'},
+                    {name: 'RS Q8 Avant', href: 'https://www.audi.cn'},
                 ]
             }]
         }
@@ -179,13 +240,15 @@
             $seriesList.className = 'series-list';
             
             seriesItem.list.forEach(item => {
-                // <a class="series-item" href="https://www.audi.cn">纯电车型</div>
+                // <div><a class="series-item" href="https://www.audi.cn">纯电车型</a></div>
+                const $linkContainer = document.createElement('div');
                 const $link = document.createElement('a');
                 $link.textContent = item.name;
                 $link.href = item.href; // 添加你需要的链接地址
                 $link.target = '_blank';
                 $link.className = 'series-item';
-                $seriesList.appendChild($link);
+                $linkContainer.appendChild($link);
+                $seriesList.appendChild($linkContainer);
             })
             $seriesContainer.appendChild($seriesTitle);
             $seriesContainer.appendChild($seriesList);
