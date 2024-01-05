@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const initFronface = () => {
+const initFrontface = () => {
     const isMobile = document.documentElement.offsetWidth < 431;
     const systemName = isMobile ? 'mob' : 'pc';
     
@@ -43,32 +43,51 @@ const initFronface = () => {
             anticipatePin: 1,
         },
         });
-        sectionTl.to(
-            `.${sectionName} .section_mask_logo`,
-            {zIndex: 1, scrub: 1, duration: 0},
-            '0.3'
-        );
-        sectionTl.to(
-            `.${sectionName} .section_mask_logo img`,
-            {scale: 1.01, scrub: 1, duration: 1},
-        );
-        sectionTl.to(
-            `.${sectionName} .section_mask_logo img`,
-            {backgroundColor: '#F50537', scrub: 1, duration: .4},
-            '<60%'
-        );
+        sectionTl.to(sectionFrame, {
+            frame: sectionCount - 1,
+            snap: "frame",
+            ease: "none",
+            duration: 1,
+            onUpdate: render, // use animation onUpdate instead of scrollTrigger's onUpdate
+        });
+    
+        if (!isMobile) {
+            sectionTl.to(
+                `.${sectionName} .section_mask`,
+                {opacity: 1, scrub: 1, duration: 1},
+                '>'
+            );
+        }
     };
-    const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
-    // const pathName = '/src/sq7'; // 本地图片路径
-    // 图片地址
-    const sectionCurrentFrame = index => `${pathName}/modellogo/${systemName}/${index + 1}.jpg`;
-    initGsap('section0', {
+    const indexName = index => {
+        if (isMobile) {
+            const i = index + 81;
+            if (i < 100) {
+                return `0${i}`
+            } else {
+                return `${i}`
+            }
+        } else {
+            const i = index + 1;
+            if (i < 10) {
+                return `000${i}`
+            } else if (i < 100) {
+                return `00${i}`
+            } else {
+                return `0${i}`
+            }
+        }
+    }
+    // const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
+    const pathName = '/src/sq7'; // 本地图片路径
+    const sectionCurrentFrame = index => `${pathName}/frontface/${systemName}/${systemName}${indexName(index)}.jpg`;
+    initGsap('section3', {
         sectionCurrentFrame: sectionCurrentFrame,
         canvasSize: {
-            pc: {width: 2880, height: 1620},
-            mob: {width: 1125, height: 2436}
+            pc: {width: 1920, height: 1080},
+            mob: {width: 1080, height: 1920}
         }[systemName],
-        sectionCount: 1 // 图片数量
+        sectionCount: document.documentElement.offsetWidth < 431 ? 45 : 129
     });
 };
-initFronface();
+initFrontface();

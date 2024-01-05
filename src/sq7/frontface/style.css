@@ -9,7 +9,7 @@ body::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
-.section0 {
+.section3 {
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
@@ -20,13 +20,13 @@ body::-webkit-scrollbar-thumb {
     position: relative;
 }
 
-.section0 .section_cover_wrapper {
+.section3 .section_cover_wrapper {
     width: 100vw;
     height: 100vh;
     background-color: #000000;
 }
 
-.section0 .section_cover-bg {
+.section3 .section_cover-bg {
     position: absolute;
     left: 0;
     top: 0;
@@ -36,38 +36,14 @@ body::-webkit-scrollbar-thumb {
     transform-origin: bottom center;
 }
 
-.section0 .section_mask_logo {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.section0 .section_mask_logo img {
-    transform: scale(70);
-    transform-origin: center;
-    background-color: rgba(255, 0, 0, 0);
-    object-fit: cover;
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-}
-.section0 .section_mask_logo img.pc-logo {
-    display: block;
-}
-.section0 .section_mask_logo img.mob-logo {
-    display: none;
-}
-.section0 .section_mask {
+.section3 .section_mask {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
 }
-.section0 .section_description{
+.section3 .section_description{
     position: absolute;
     top: 108px;
     left: 40px;
@@ -78,14 +54,14 @@ body::-webkit-scrollbar-thumb {
     z-index: 1;
     color: #fff;
 }
-.section0 .section_description-div{
+.section3 .section_description-div{
     font-size: 36px;
     letter-spacing: 1px;
     margin-bottom: 16px;
     font-family: "audi-wide-bold","audi-zh-bold";
     line-height: 48px;
 }
-.section0 .section_description-p{
+.section3 .section_description-p{
     font-size: 16px;
     letter-spacing: .5px;
     max-width: 100%;
@@ -93,38 +69,11 @@ body::-webkit-scrollbar-thumb {
     margin: 0 0 32px 0;
     line-height: 24px;
 }
-.section0 .section_description-a{
-    display: inline-block;
-    text-decoration: none;
-}
-.section0 .section_description-a button{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 164px;
-    height: 44px;
-    border: 1px solid #fff;
-    background: transparent;
-    color: #fff;
-    font-size: 15px;
-    line-height: 24px;
-}
-.section0 .section_description-a:hover button{
-    background: rgba(255, 255, 255, 0.3)
-}
 @media only screen and (max-width:768px) {
-    .section0 .section_mask_logo img {
-        transform: scale(200);
+    .section3 {
+        height: 200vh;
     }
-    .section0 .section_mask_logo img.mob-logo {
-        display: block;
-        image-rendering: optimizeQuality;
-    }
-    .section0 .section_mask_logo img.pc-logo {
-        display: none;
-    }
-    .section0 .section_description{
+    .section3 .section_description{
         width: 80%;
         top: 88px;
         left: 0;
@@ -132,53 +81,53 @@ body::-webkit-scrollbar-thumb {
         margin: auto;
         text-align: center;
     }
-    .section0 .section_description-div{
+    .section3 .section_description-div{
         font-size: 24px;
         line-height: 32px;
         margin-bottom: 10px;
     }
-    .section0 .section_description-p{
+    .section3 .section_description-p{
         font-size: 14px;
         margin-bottom: 12px;
     }
-    .section0 .section_description-a button{
-        font-size: 12px;
-        line-height: 1.67;
-    }
-    .section0 .section_cover-bg {
+    .section3 .section_cover-bg {
         transform: scale(1);
     }
 }
 @media only screen and (min-width: 768px) {
-    .section0 .section_description{
+    .section3 .section_mask {
+        opacity: 0;
+        background: rgba(0, 0, 0, .4);
+    }
+    .section3 .section_description{
         width: 378px;
         text-align: left;
     }
 }
 
 @media (min-width: 820px) {
-    .section0 .section_description{
+    .section3 .section_description{
         top: 188px;
     }
 }
 @media (min-width: 1024px) {
-    .section0 .section_description{
+    .section3 .section_description{
         top: 128px;
     }
 }
 @media (min-width: 1194px) {
-    .section0 .section_description{
+    .section3 .section_description{
         top: 80px;
     }
 }
 @media (min-width: 1440px) {
-    .section0 .section_description{
+    .section3 .section_description{
         top: 80px;
         left: 76px;
     }
 }
 @media (min-width: 1920px) {
-    .section0 .section_description{
+    .section3 .section_description{
         top: 168px;
         left: 96px;
     }
