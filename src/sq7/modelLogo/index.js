@@ -1,5 +1,5 @@
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const initFronface = () => {
@@ -43,25 +43,14 @@ const initFronface = () => {
             anticipatePin: 1,
         },
         });
-        sectionTl.to(sectionFrame, {
-            frame: sectionCount - 1,
-            snap: "frame",
-            ease: "none",
-            duration: 1,
-            onUpdate: render, // use animation onUpdate instead of scrollTrigger's onUpdate
-        });
-    
-        if (!isMobile) {
-            sectionTl.to(
-                `.${sectionName} .section_mask`,
-                {opacity: 1, scrub: 1, duration: 1},
-                '>'
-            );
-        }
+        sectionTl.to(
+            `.${sectionName} .section_mask_logo`,
+            {zIndex: 1, scrub: 1, duration: 1},
+            '0.3'
+        );
         sectionTl.to(
             `.${sectionName} .section_mask_logo img`,
-            {scale: 1, scrub: 1, duration: 1, delay: 0.5},
-            '>'
+            {scale: 1, scrub: 1, duration: 1},
         );
         sectionTl.to(
             `.${sectionName} .section_mask_logo img`,
@@ -69,10 +58,10 @@ const initFronface = () => {
             '<60%'
         );
     };
-    // const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
-    const pathName = '/src/sq7'; // 本地图片路径
+    const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
+    // const pathName = '/src/sq7'; // 本地图片路径
     // 图片地址
-    const sectionCurrentFrame = index => `${pathName}/frontface/${systemName}/${index + 1}.jpg`;
+    const sectionCurrentFrame = index => `${pathName}/modelLogo/${systemName}/${index + 1}.jpg`;
     initGsap('section3', {
         sectionCurrentFrame: sectionCurrentFrame,
         canvasSize: {
