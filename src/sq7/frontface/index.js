@@ -78,8 +78,8 @@ const initFrontface = () => {
             }
         }
     }
-    // const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
-    const pathName = '/src/sq7'; // 本地图片路径
+    const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
+    // const pathName = '/src/sq7'; // 本地图片路径
     const sectionCurrentFrame = index => `${pathName}/frontface/${systemName}/${systemName}${indexName(index)}.jpg`;
     initGsap('section3', {
         sectionCurrentFrame: sectionCurrentFrame,

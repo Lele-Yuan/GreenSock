@@ -54,8 +54,8 @@ const initFronface = () => {
         );
         sectionTl.to(
             `.${sectionName} .section_mask_logo img`,
-            {backgroundColor: '#F50537', scrub: 1, duration: .4},
-            '<60%'
+            {backgroundColor: '#F50537', scrub: 1, duration: .67},
+            '<43%'
         );
     };
     const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
