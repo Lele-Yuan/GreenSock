@@ -18,6 +18,7 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     height: 400vh;
     position: relative;
+    overflow: hidden;
 }
 
 .section3 .section_cover_wrapper {
@@ -74,8 +75,8 @@ body::-webkit-scrollbar-thumb {
         height: 200vh;
     }
     .section3 .section_description{
-        width: 80%;
-        top: 88px;
+        /* width: 80%; */
+        top: 128px;
         left: 0;
         right: 0;
         margin: auto;
@@ -100,7 +101,7 @@ body::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, .4);
     }
     .section3 .section_description{
-        width: 378px;
+        /* width: 378px; */
         text-align: left;
     }
 }
