@@ -8,9 +8,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
-.cmp-car-detail-banner.video-mode .banner-media video {
-    object-fit: cover;
-}
 .section0 {
     height: 100vh;
     width: 100%;
@@ -84,14 +81,12 @@ body::-webkit-scrollbar-thumb {
 }
 .section0 .section_description-div{
     font-size: 36px;
-    letter-spacing: 1px;
     margin-bottom: 16px;
     font-family: "audi-wide-bold","audi-zh-bold";
     line-height: 48px;
 }
 .section0 .section_description-p{
     font-size: 16px;
-    letter-spacing: .5px;
     max-width: 100%;
     line-height: 24px;
     margin: 0 0 32px 0;
@@ -133,7 +128,7 @@ body::-webkit-scrollbar-thumb {
     }
     .section0 .section_description{
         /* width: 80%; */
-        top: 128px;
+        top: 108px;
         left: 0;
         right: 0;
         margin: auto;
@@ -141,12 +136,15 @@ body::-webkit-scrollbar-thumb {
     }
     .section0 .section_description-div{
         font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 10px;
+        line-height: 1.5;
+        margin-bottom: 16px;
     }
     .section0 .section_description-p{
         font-size: 14px;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
+    }
+    .section0 .section_description-a {
+        padding-top: 16px;
     }
     .section0 .section_description-a button{
         font-size: 12px;

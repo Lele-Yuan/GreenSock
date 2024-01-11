@@ -65,7 +65,7 @@ const initFronface = () => {
     initGsap('section0', {
         sectionCurrentFrame: sectionCurrentFrame,
         canvasSize: {
-            pc: {width: 2880, height: 1620},
+            pc: {width: 2880, height: 1500},
             mob: {width: 1125, height: 2436}
         }[systemName],
         sectionCount: 1 // 图片数量

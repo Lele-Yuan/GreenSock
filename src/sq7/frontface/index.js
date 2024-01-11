@@ -60,22 +60,13 @@ const initFrontface = () => {
         }
     };
     const indexName = index => {
-        if (isMobile) {
-            const i = index + 81;
-            if (i < 100) {
-                return `0${i}`
-            } else {
-                return `${i}`
-            }
+        const i = index + 1;
+        if (i < 10) {
+            return `000${i}`
+        } else if (i < 100) {
+            return `00${i}`
         } else {
-            const i = index + 1;
-            if (i < 10) {
-                return `000${i}`
-            } else if (i < 100) {
-                return `00${i}`
-            } else {
-                return `0${i}`
-            }
+            return `0${i}`
         }
     }
     const pathName = '/content/dam/OneWeb/faw_vw/model/q7/sq7/2023/animation/final';  // 线上图片路径
@@ -87,7 +78,7 @@ const initFrontface = () => {
             pc: {width: 1920, height: 1080},
             mob: {width: 1080, height: 1920}
         }[systemName],
-        sectionCount: document.documentElement.offsetWidth < 431 ? 45 : 129
+        sectionCount: document.documentElement.offsetWidth < 431 ? 80 : 129
     });
 };
 initFrontface();
