@@ -8,8 +8,9 @@ module.exports = {
     // sq7_electric: './src/sq7/electric/index.js',
     // sq7_carface: './src/sq7/carface/index.js'
     // sq7_carface: './src/sq7/carface/index.js'
-    sq7_modellogo: './src/sq7/modellogo/index.js',
-    sq7_frontface: './src/sq7/frontface/index.js'
+    // sq7_modellogo: './src/sq7/modellogo/index.js',
+    // sq7_frontface: './src/sq7/frontface/index.js'
+    homepage: './src/indexPage/index.js'
   }, //打包入口文件(如果是单个入口就是字符串，如果是多个入口就需要配置成对象)
   output: { //打包输出文件
       path: path.join(__dirname, 'dist'),
