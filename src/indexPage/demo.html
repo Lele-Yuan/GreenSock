@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TweenMax.min.js"></script>
+    <script>
+        // 获取tab切换按钮和tab内容元素  
+    var tabs = document.querySelectorAll('.tab');  
+    var tabContents = document.querySelectorAll('.tab-content');  
+    
+    // 监听按钮点击事件  
+    tabs.forEach(function(tab, index) {  
+    tab.addEventListener('click', function() {  
+        // 隐藏所有tab内容  
+        tabContents.forEach(function(content) {  
+        content.style.display = 'none';  
+        });  
+        // 显示选中的tab内容  
+        document.getElementById(this.dataset.tab).style.display = 'block';  
+    });  
+    });
+    // 获取选中的tab内容元素  
+var selectedTabContent = document.getElementById(tabs[0].dataset.tab);  
+  
+  // 使用GSAP的to()方法添加动画效果  
+  TweenMax.to(selectedTabContent, 0.5, { opacity: 1, onComplete: function() {  
+    // 在动画完成后执行其他操作（可选）  
+  }});
+    </script>
+</head>
+<body>
+    <div class="tabs">  
+        <button class="tab" data-tab="tab1">Tab 1</button>  
+        <button class="tab" data-tab="tab2">Tab 2</button>  
+        <button class="tab" data-tab="tab3">Tab 3</button>  
+      </div>  
+        
+      <div id="tab1" class="tab-content">Content 1</div>  
+      <div id="tab2" class="tab-content">Content 2</div>  
+      <div id="tab3" class="tab-content">Content 3</div>
+      
+</body>
+</html>

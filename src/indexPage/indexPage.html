@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="./index.js"></script>
+
+    <style>
+        img{
+            border: none;
+        }
+        html body {
+            padding: 0;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        body::-webkit-scrollbar {
+            background-color: transparent;
+            width: 0;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: transparent;
+        }
+        .homepage-model{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .homepage-model .model-selection{
+            position: absolute;
+            margin: 0 auto 0;
+            z-index: 2;
+            top: 50%; /* 从顶部边界向下移动自身高度的一半 */
+            left: 10%; /* 从左侧边界向右移动自身宽度的一半 */
+            transform: translate(0, -50%); /* 通过负百分比调整元素的位置 */
+        }
+        .homepage-model .model-selection .item{
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 40px;
+            cursor: pointer;
+            user-select: none;
+            transition: all .3s ease;
+        }
+        .homepage-model .model-selection .active{
+            color: rgba(255, 255, 255, 1);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            margin-bottom: 35px;
+        }
+        .homepage-model .tab-box{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            overflow: hidden;
+        }
+        .homepage-model .car{
+            width: 300px;
+            position: absolute;
+        }
+        .homepage-model .bg{
+            width: 100vw;
+            height: 100vh;
+        }
+        .homepage-model .btn{
+            width: 237px;
+            height: 58px;
+            flex-shrink: 0;
+            border: 1px solid #FFF;
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color: #FFF;
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor:pointer;
+        }
+
+        .homepage-model .content .bg > img, .homepage-model .content .car > img{ opacity: 0; }
+        .homepage-model .content .bg > .active, .homepage-model .content .car > .active{ opacity: 1; }
+        .homepage-model .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .homepage-model .content .mobile{
+            display: none;
+        }
+        .homepage-model .content .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .homepage-model .content .bg img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .homepage-model .content .car {
+            position: absolute;
+            bottom: 4vw;
+            right: 14vw;
+            width: 60vw;
+            object-fit: cover;
+        }
+        .homepage-model .content .car img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            object-fit: cover;
+        }
+        @media only screen and (min-width: 375px) and (max-width:767px) {
+            .homepage-model .model-selection{
+                display: flex;
+                top: 92px;
+                display: inline-flex;
+                white-space: nowrap;
+                width: 100%;
+                overflow-x: auto;
+                transform: translate(0);
+                left: 0;
+            }
+            .homepage-model .model-selection::-webkit-scrollbar {
+                height: 0;
+            }
+            .homepage-model .model-selection .item{
+                font-size: 20px;
+                margin-right: 16px;
+                display: inline-block;
+            }
+            
+            .homepage-model .model-selection .item:first-child{
+                margin-left: 30px;
+            }
+            .homepage-model .model-selection .item:last-child{
+                margin-right: 20px;
+            }
+            .homepage-model .model-selection .active{
+                font-size: 20px;
+                position: relative;
+            }
+            .homepage-model .model-selection .active:after{
+                content: '';
+                background: #fff;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                height: 2px;
+                width: 22px;
+            }
+            .homepage-model .content .pc{
+                display: none;
+            }
+            .homepage-model .content .mobile{
+                display: block;
+            }
+            .homepage-model .content .car {
+                bottom: initial;
+                top: 76%;
+                right: 0vw;
+                left: 0;
+                margin: auto;
+                width: 104vw;
+            }
+            .homepage-model .btn{
+                width: 132px;
+                height: 32px;
+                font-size: 10px;
+            }
+        }
+        @media only screen and (min-width: 768px) and (max-width:820px) {
+            .homepage-model .model-selection{
+                top: 30%; /* 从顶部边界向下移动自身高度的一半 */
+            }
+            .homepage-model .content .car {
+                bottom: 30vw;
+                width: 70vw;
+            }
+        }
+        @media only screen and (min-width: 821px) and (max-width:1180px) {
+            .homepage-model .content .car {
+                bottom: 11vw;
+                width: 64vw;
+            }
+        }
+        @media only screen and (min-width: 821px) and (max-width:1180px) and (min-height: 821px) and (max-height:1366px) {
+            .homepage-model .model-selection{
+                top: 30%; /* 从顶部边界向下移动自身高度的一半 */
+            }
+            .homepage-model .content .car {
+                bottom: 32vw;
+                width: 70vw;
+            }
+        }
+        @media only screen and (min-width: 1181px) and (max-width:1200px) {
+            .homepage-model .model-selection{
+                top: 30%; /* 从顶部边界向下移动自身高度的一半 */
+            }
+            .homepage-model .content .car {
+                bottom: 32vw;
+                width: 70vw;
+            }
+        }
+        @media only screen and (min-width: 1201px) and (max-width:1366px) {
+            .homepage-model .content .car {
+                bottom: 13vw;
+                width: 68vw;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="homepage-model">
+    <div class="model-selection">
+        <div class="item active" data-target="item1">轿车</div>
+        <div class="item" data-target="item2">SUV</div>
+        <div class="item" data-target="item3">轿车&敞篷车</div>
+        <div class="item" data-target="item4">旅行车</div>
+        <div class="item" data-target="item5">纯电车</div>
+        <div class="item" data-target="item6">高性能车</div>
+    </div>
+    <div class="content">
+        <div class="bg pc">
+            <img class="item1 active" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/A8L-bg.png" alt="">
+            <img class="item2" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/Q8-bg.png" alt="">
+            <img class="item3" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/S5-bg.png" alt="">
+            <img class="item4" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/A4-bg.png" alt="">
+            <img class="item5" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/Q4-bg.png" alt="">
+            <img class="item6" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/RS-bg.png" alt="">
+        </div>
+        <div class="car pc">
+            <img class="item1 active" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/A8L.png" alt="">
+            <img class="item2" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/Q8.png" alt="">
+            <img class="item3" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/S5.png" alt="">
+            <img class="item4" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/A4.png" alt="">
+            <img class="item5" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/Q4.png" alt="">
+            <img class="item6" src="/content/dam/OneWeb/faw_vw/homepage/20240121/pc/RS.png" alt="">
+        </div>
+        <div class="bg mobile">
+            <img class="item1 active" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/A8L-bg.png" alt="">
+            <img class="item2" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/Q8-bg.png" alt="">
+            <img class="item3" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/S5-bg.png" alt="">
+            <img class="item4" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/A4-bg.png" alt="">
+            <img class="item5" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/Q4-bg.png" alt="">
+            <img class="item6" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/RS-bg.png" alt="">
+        </div>
+        <div class="car mobile">
+            <img class="item1 active" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/A8L.png" alt="">
+            <img class="item2" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/Q8.png" alt="">
+            <img class="item3" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/S5.png" alt="">
+            <img class="item4" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/A4.png" alt="">
+            <img class="item5" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/Q4.png" alt="">
+            <img class="item6" src="/content/dam/OneWeb/faw_vw/homepage/20240121/mob/RS.png" alt="">
+        </div>
+        <div class="btn">探索车型</div>
+    </div>
+</div>
+<script src="/content/dam/OneWeb/faw_vw/homepage/20240121/audi-homepage.js"></script>
+
+    <!-- <script>
+        let isPlaying = false;
+        let activeItem = 'item1';
+        function isIOS() {
+            if (/iPad|iPhone|iPod/.test(navigator.platform)) {
+                return true;
+            } else {
+                return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
+            }
+        }
+        function isMobile() {
+            var THREHOLD_RWD_MOBILE_LAYOUT = 541;
+            return ($(window).innerWidth() < THREHOLD_RWD_MOBILE_LAYOUT) || isIOS() || /(android|bbd+|meego).+mobile|avantgo|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|plucker|pocket|psp|series(4|6)0|symbian|treo|up.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(navigator.userAgent.toLowerCase());
+        }
+        $('.homepage-model .model-selection .item').click(function() {
+
+            if(isMobile()) {
+                var container = $('.homepage-model .model-selection');
+                var containerWidth = container.width();
+                var scrollLeft = container.scrollLeft();
+                var itemOffset = $(this).offset().left;
+                var itemWidth = $(this).outerWidth();
+                var itemIndex = $(this).index();
+    
+                var position;
+                if(itemIndex === 0) {
+                    position = 0;
+                } else if(itemIndex === $('.item').length - 1) {
+                    position = container[0].scrollWidth - containerWidth;
+                } else {
+                    position = scrollLeft + itemOffset - containerWidth / 2 + itemWidth / 2;
+                }
+    
+                container.animate({
+                    scrollLeft: position
+                }, 500);
+            }
+
+
+            if (isPlaying || activeItem === $(this).data('target')) return;
+            $('.homepage-model .model-selection .item').each(function () {
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
+            var tl = gsap.timeline();
+            var leaveBg = $('.bg .active');
+            var leaveCar = $('.car .active');
+
+            var target = $(this).data('target');
+            var enterBg = $('.bg').find(`.${target}`);
+            var enterCar = $('.car').find(`.${target}`);
+            
+            isPlaying = true;
+            tl.to(leaveBg, {
+                duration: .5,
+                opacity: 0,
+            });
+
+            tl.to(enterBg, {
+                duration: .5,
+                opacity: 1,
+            }, '<');
+            enterCar.addClass('active');
+            tl.to(leaveCar, {
+                duration: .2,
+                opacity: 0,
+                onComplete: () => {
+                    activeItem = target;
+                }
+            }, '-=0.5');
+            tl.fromTo(enterCar, {
+                duration: .5,
+                translateX: 200,
+                opacity: 0,
+            }, {
+                duration: .5,
+                translateX: 0,
+                opacity: 1,
+            }, '-=0.5')
+
+            tl.then(() => {
+                isPlaying = false;
+                tl.to(leaveCar, {
+                    duration: 0,
+                    translateX: 0,
+                })
+                $('.bg').find('img').each(function () {
+                    if (!$(this).hasClass(target)) {
+                        tl.to($(this), {
+                            duration: 0,
+                            opacity: 0,
+                        })
+                        $(this).removeClass('active');
+                    }
+                })
+                $('.car').find('img').each(function () {
+                    if (!$(this).hasClass(target)) {
+                        tl.to($(this), {
+                            duration: 0,
+                            opacity: 0,
+                        })
+                        $(this).removeClass('active');
+                    }
+                })
+                enterBg.addClass('active');
+                enterCar.addClass('active');
+            });
+        });
+    </script> -->
+</body>
+</html>
