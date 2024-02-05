@@ -50,8 +50,8 @@ $(window).on('load', function(){
         
         element.addEventListener('touchmove', function(event) {
             // 防止页面滚动
-            event.preventDefault();
-            
+            // event.preventDefault();
+
             // 计算移动距离
             var moveDistance = event.changedTouches[0].pageX - startX;
             
@@ -64,7 +64,7 @@ $(window).on('load', function(){
                 // console.log("右滑");
                 touchPosition = 'right';
             }
-        });
+        }, true);
         
         element.addEventListener('touchend', function() {
             var targetItem;

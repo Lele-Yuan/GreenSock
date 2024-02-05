@@ -128,7 +128,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     object-fit: cover;
 }
-@media only screen and (min-width: 375px) and (max-width:767px) {
+@media only screen and (max-width:767px) {
     .homepage-model .model-selection{
         display: flex;
         top: 92px;
@@ -185,7 +185,12 @@ body::-webkit-scrollbar-thumb {
     }
     .homepage-model .btn{
         font-size: 14px;
-        bottom: 108px;
+        bottom: 168px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .homepage-model .btn{
+        bottom: 138px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width:820px) {
