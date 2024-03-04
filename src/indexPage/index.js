@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import $ from "jquery";
 
-$(window).on('load', function(){
+$(function() {
     let isPlaying = false;
     let activeItem = 'item1';
 
@@ -11,7 +11,7 @@ $(window).on('load', function(){
         'item3': 'https://www.audi.cn/zh/function_center/Models_Body_Type/coupe_convertible.html',
         'item4': 'https://www.audi.cn/zh/function_center/Models_Body_Type/station_wagon.html',
         'item5': 'https://www.audi.cn/zh/function_center/Models_Body_Type/electric.html',
-        'item6': 'https://www.audi.cn/zh/function_center/Models_Body_Type/s_rs.html',
+        'item6': 'https://www.audi.cn/zh/rs.html',
     }
     
     var $btn = $('.homepage-model .content .btn');
