@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <!-- <script src="https://contact.audi.cn/dictionary_js/dict_autos.js?v=0.1.8"></script>
+    <script src="https://contact.audi.cn/dictionary_js/tb_dealer.js?v=0.1.8"></script>
+    <script src="./dict_select.js"></script>
+    <script src="./jquery.js"></script>
+    <script src="./tb_dealer.js"></script> -->
+    <script src="/audi-form.js"></script>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+    <div id="testdrive">
+        <script src="https://api.map.baidu.com/getscript?v=2.0&ak=sGmkcFHVDl5HM6lT99RVGKjXD9MISBVW&services=&t=20240108120844"></script>
+        <script src="/content/dam/OneWeb/faw_vw/apps/custom-form-test/audi-form.js"></script>
+        <div id="formConfig" hidden data-config='{"campaign":"test campaign","model":"A3","bodyType":"A3 Sportback"}'></div>
+        <form class="audi-form" action="">
+            <div class="audi-form-item audi-select">
+                <label class="audi-form-item__label" for="atd_atdIntentCar">意向车系</label>
+                <select class="audi-input__select" id="atd_atdIntentCar"></select>
+                <span class="audi-validate__error" id="intentBuyStyleMsg"></span>
+            </div>
+            <div class="audi-form-item audi-select">
+                <label class="audi-form-item__label" for="atd_atdIntentModel">意向车型</label>
+                <select class="audi-input__select" id="atd_atdIntentModel">
+                    <option selected="" value="">车型</option>
+                </select>
+                <span class="audi-validate__error" id="intentBuyModelMsg"></span>
+            </div>
+            <div class="audi-form-item audi-textfield">
+                <label class="audi-form-item__label" class="audi-textfield__label" for="inputname">姓名</label>
+                <input class="audi-input__text" type="text" id="inputname" placeholder="姓名" />
+                <span class="audi-validate__error" id="nameMsg"></span>
+            </div>
+            <div class="audi-form-item audi-textfield">
+                <label class="audi-form-item__label" class="audi-textfield__label" for="inputmobile">移动电话</label>
+                <input class="audi-input__text" type="text" id="inputmobile" placeholder="移动电话" />
+                <span class="audi-validate__error" id="mobileMsg"></span>
+            </div>
+            <div class="audi-form-item audi-select">
+                <label class="audi-form-item__label" for="dealerProvince">经销商省</label>
+                <select class="audi-input__select" id="dealerProvince"></select>
+                <span class="audi-validate__error" id="provinceMsg"></span>
+            </div>
+            <div class="audi-form-item audi-select">
+                <label class="audi-form-item__label" for="dealerCity">经销商市</label>
+                <select class="audi-input__select" id="dealerCity"></select>
+                <span class="audi-validate__error" id="cityMsg"></span>
+            </div>
+            <div class="audi-form-item audi-select">
+                <label class="audi-form-item__label" for="dealer">经销商</label>
+                <select class="audi-input__select" id="dealer"></select>
+                <span class="audi-validate__error" id="dealerMsg"></span>
+            </div>
+            <div class="audi-form-item audi-select">
+                <label class="audi-form-item__label" for="datetime">计划购车时间</label>
+                <select class="audi-input__select" id="datetime">
+                    <option selected="" value="">计划购车时间</option>
+                    <option value="volvo">最近一周</option>
+                    <option value="saab">最近一个月</option>
+                    <option value="opel">最近三个月</option>
+                    <option value="audi">最近半年</option>
+                </select>
+            </div>
+            <div class="audi-checkbox" id="open">
+                <a class="audi-checkbox__label" href="https://www.audi.cn/zh/privacy.html" target="_blank">接受《隐私条款》</a>
+                <span class="audi-checkbox__tick">
+                    <img src="https://www.audi.cn/etc.clientlibs/OneWeb/clientlibs/clientlib-page-default/resources/checkbox.svg" alt="">
+                </span>
+            </div>
+            <p class="protocol">我特此授权奥迪，需按照数据保护规定，保留我的信息数据，以便解答我的问题。我同意把我的数据用于其它营销调查和统计目的，并允许奥迪根据我所提供的信息与我联系。</p>
+            <div class="audi-form__button">
+                <button type="button" id="postbtn">提交</button>
+            </div>
+        </form>
+
+        <div class="window-warn" style="display: none;">
+            <img class="warn" src="https://www.audi.cn/content/dam/OneWeb/faw_vw/apps/assert/warning.png">
+            <img class="success" src="https://www.audi.cn/content/dam/OneWeb/faw_vw/apps/assert/successful.png">
+            <span class="message"></span>
+        </div>
+    </div>
+</body>
+</html>
